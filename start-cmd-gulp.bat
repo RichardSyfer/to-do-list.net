@@ -1,0 +1,1 @@
+START "runas /user:administrator" cmd /K "cd %this_dir% & gulp"

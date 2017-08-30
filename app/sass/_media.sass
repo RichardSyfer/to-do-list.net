@@ -1,0 +1,87 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.todo-list
+		&--name
+			p
+				padding: 0 15px 
+		&--ico
+			display: none
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.todo-list
+		&--name
+			p
+				padding: 0 15px 
+		&--ico
+			display: none
+		&--btn
+			margin: 0 0 10px 0
+
+		&--add-new-task
+			padding: 15px
+			i
+				display: none
+			input
+				margin: 0
+				flex-basis: 400px
+		&--btn-add-new-task
+				margin-top: 10px
+		&--task-description
+			font-size: 14px
+			font-weight: 400
+			border-right: none
+			padding: 3px 10px
+
+/* Touchscreen - primary input mechanism is a finger */		
+@media (pointer: coarse)
+	.todo-list--task-btns
+		display: flex
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+ .todo-list--register-form
+	 .btn-register
+			padding: 10px 25px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
