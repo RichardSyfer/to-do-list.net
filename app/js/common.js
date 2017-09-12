@@ -67,36 +67,36 @@ $(document).on("click", ".todo-list--task-chkbx-done", function() {
 ////LIST-FUNCTIONS///
 //add new empty list block
 $(document).on("click", ".todo-list--btn-add", function() {
-    if (!newListBlockAdded) {
-        newListBlockAdded = true;
-        $('.todo-list--btn-add-wrapper').before(
-            '<div class="todo-list" data-todo-list-id="">' +
-            '<div class="todo-list--name" name="todo-list--name">' +
-            '<i class="todo-list--ico fa fa-list-alt"></i>' +
-            '<p class="todo-list-name">' +
-            '<input type="text" '+
-            'name="todo-list--add-new-project-description" ' +
-            'placeholder="Start typing here new TODO list description... "' +
-            'maxlength="1000">' +
-            '</p>' +
-            '<div class="todo-list--btn">' +
-            '<i class="todo-list--btn-insert fa fa-save"></i>' +
-            '<i class="todo-list--btn-remove fa fa-trash"></i>' +
-            '</div>' +
-            '</div>' +
-            '</div>'
-        );
-        $('input[name $= -add-new-project-description]').focus();
-    } else {
-        console.log('You have unsaved TODO list');
-        $().toastmessage('showNoticeToast', 'You have unsaved TODO list');
-    }
+  if (!newListBlockAdded) {
+    newListBlockAdded = true;
+    $('.todo-list--btn-add-wrapper').before(
+      '<div class="todo-list" data-todo-list-id="">' +
+      '<div class="todo-list--name" name="todo-list--name">' +
+      '<i class="todo-list--ico fa fa-list-alt"></i>' +
+      '<p class="todo-list-name">' +
+      '<input type="text" '+
+      'name="todo-list--add-new-project-description" ' +
+      'placeholder="Start typing here new TODO list description... "' +
+      'maxlength="1000">' +
+      '</p>' +
+      '<div class="todo-list--btn">' +
+      '<i class="todo-list--btn-insert fa fa-save"></i>' +
+      '<i class="todo-list--btn-remove fa fa-trash"></i>' +
+      '</div>' +
+      '</div>' +
+      '</div>'
+    );
+    $('input[name $= -add-new-project-description]').focus();
+  } else {
+      console.log('You have unsaved TODO list');
+      $().toastmessage('showNoticeToast', 'You have unsaved TODO list');
+  }
 });	// onClick Add new todo-list
 
 //remove empty list block
 $(document).on("click", ".todo-list--btn-remove", function() {
-    newListBlockAdded = false;
-    $(this).closest('.todo-list').remove();
+  newListBlockAdded = false;
+  $(this).closest('.todo-list').remove();
 });//remove empty list block
 
 //insert new list
@@ -421,7 +421,7 @@ function listEdit(list, event) {
 														console.log(data.reply);
 
 														listName.html(newListName);
-                                                        newListBlockAdded = false;
+														newListBlockAdded = false;
 														list.find('.todo-list--btn').html(
 															'<i class="todo-list--btn-edit fa fa-pencil"></i>' +
 															'<i class="todo-list--btn-delete fa fa-trash"></i>'	);
